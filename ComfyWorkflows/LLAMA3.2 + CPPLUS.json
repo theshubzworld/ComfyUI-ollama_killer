@@ -1,0 +1,3221 @@
+{
+  "last_node_id": 242,
+  "last_link_id": 674,
+  "nodes": [
+    {
+      "id": 132,
+      "type": "Control_Box",
+      "pos": {
+        "0": -142.64959716796875,
+        "1": 375.7440490722656
+      },
+      "size": {
+        "0": 367.79998779296875,
+        "1": 558
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 17,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "positive_prompt",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "negative_prompt",
+          "type": "CONDITIONING",
+          "link": null
+        },
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 643,
+          "slot_index": 2
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        },
+        {
+          "name": "latent_height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "latent_height"
+          }
+        },
+        {
+          "name": "latent_width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "latent_width"
+          }
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "width"
+          }
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "link": null,
+          "widget": {
+            "name": "height"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "links": [
+            645,
+            646
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "links": [
+            408,
+            417
+          ],
+          "slot_index": 1,
+          "shape": 3
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "links": [
+            409,
+            418
+          ],
+          "slot_index": 2,
+          "shape": 3
+        },
+        {
+          "name": "latent_out",
+          "type": "LATENT",
+          "links": [
+            410
+          ],
+          "slot_index": 3,
+          "shape": 3
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "links": [
+            414,
+            422
+          ],
+          "shape": 3
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "links": [
+            411,
+            420
+          ],
+          "shape": 3
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "links": [
+            412,
+            421
+          ],
+          "shape": 3
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "links": [
+            413
+          ],
+          "shape": 3
+        },
+        {
+          "name": "scaler",
+          "type": "FLOAT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "links": [
+            470
+          ],
+          "slot_index": 9,
+          "shape": 3
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "latent_width",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "latent_height",
+          "type": "INT",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "Control_Box"
+      },
+      "widgets_values": [
+        1.5,
+        10,
+        1,
+        1,
+        1986678698,
+        "fixed",
+        1200,
+        1200,
+        1200,
+        1200,
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 131,
+      "type": "KSampler",
+      "pos": {
+        "0": 224.35130310058594,
+        "1": 375.7440490722656
+      },
+      "size": {
+        "0": 322.1718444824219,
+        "1": 557.4523315429688
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 23,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 645,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 408,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 409,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 410
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 411,
+          "slot_index": 5,
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 412,
+          "slot_index": 6,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "denoise",
+          "type": "FLOAT",
+          "link": 413,
+          "slot_index": 7,
+          "widget": {
+            "name": "denoise"
+          }
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 414,
+          "slot_index": 7,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            462,
+            481
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        574875899854671,
+        "randomize",
+        10,
+        1.5,
+        "ddpm",
+        "exponential",
+        1
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 133,
+      "type": "LatentUpscaleBy",
+      "pos": {
+        "0": 547.0653686523438,
+        "1": 375.4571838378906
+      },
+      "size": {
+        "0": 334.8398132324219,
+        "1": 556.9147338867188
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 28,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 481,
+          "slot_index": 0
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            477
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LatentUpscaleBy"
+      },
+      "widgets_values": [
+        "nearest-exact",
+        1.5
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 154,
+      "type": "Anything Everywhere3",
+      "pos": {
+        "0": 956.0654296875,
+        "1": 433.457275390625
+      },
+      "size": {
+        "0": 252,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true,
+        "pinned": true
+      },
+      "order": 35,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "LATENT",
+          "type": "*",
+          "link": 479,
+          "color_on": "#b38ead",
+          "shape": 7
+        },
+        {
+          "name": "anything",
+          "type": "*",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "anything",
+          "type": "*",
+          "link": null,
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere3",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 134,
+      "type": "KSampler",
+      "pos": {
+        "0": 880.0654296875,
+        "1": 375.4571838378906
+      },
+      "size": {
+        "0": 309.01800537109375,
+        "1": 556.1998291015625
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 33,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": 646,
+          "slot_index": 0
+        },
+        {
+          "name": "positive",
+          "type": "CONDITIONING",
+          "link": 417,
+          "slot_index": 1
+        },
+        {
+          "name": "negative",
+          "type": "CONDITIONING",
+          "link": 418,
+          "slot_index": 2
+        },
+        {
+          "name": "latent_image",
+          "type": "LATENT",
+          "link": 477
+        },
+        {
+          "name": "cfg",
+          "type": "FLOAT",
+          "link": 420,
+          "slot_index": 5,
+          "widget": {
+            "name": "cfg"
+          }
+        },
+        {
+          "name": "steps",
+          "type": "INT",
+          "link": 421,
+          "slot_index": 6,
+          "widget": {
+            "name": "steps"
+          }
+        },
+        {
+          "name": "seed",
+          "type": "INT",
+          "link": 422,
+          "slot_index": 7,
+          "widget": {
+            "name": "seed"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": [
+            479
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "KSampler"
+      },
+      "widgets_values": [
+        737223950124370,
+        "randomize",
+        10,
+        1.5,
+        "ddpm",
+        "sgm_uniform",
+        0.35000000000000003
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 139,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1268.065185546875,
+        "1": 403.4571838378906
+      },
+      "size": {
+        "0": 275,
+        "1": 50
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 27,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": 462
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            466
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": [],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 140,
+      "type": "VAEDecode",
+      "pos": {
+        "0": 1933.063232421875,
+        "1": 381.45721435546875
+      },
+      "size": {
+        "0": 275,
+        "1": 50
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 24,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "samples",
+          "type": "LATENT",
+          "link": null
+        },
+        {
+          "name": "vae",
+          "type": "VAE",
+          "link": 470
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            439
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "VAEDecode"
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 62,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1202.065185546875,
+        "1": 300.4572448730469
+      },
+      "size": {
+        "0": 655.9327392578125,
+        "1": 707.347900390625
+      },
+      "flags": {
+        "pinned": true
+      },
+      "order": 32,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 466
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "color": "#f3ebeb",
+      "bgcolor": "#dfd7d7"
+    },
+    {
+      "id": 183,
+      "type": "CR Text Input Switch",
+      "pos": {
+        "0": -2200.634521484375,
+        "1": 92.4928970336914
+      },
+      "size": {
+        "0": 245.77659606933594,
+        "1": 75.87599182128906
+      },
+      "flags": {},
+      "order": 31,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text1",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text1"
+          },
+          "label": "1 - Verbatim",
+          "shape": 7
+        },
+        {
+          "name": "text2",
+          "type": "STRING",
+          "link": 541,
+          "widget": {
+            "name": "text2"
+          },
+          "label": "2- LLM",
+          "shape": 7
+        },
+        {
+          "name": "Input",
+          "type": "INT",
+          "link": 542,
+          "widget": {
+            "name": "Input"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            608
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "title": "String switch",
+      "properties": {
+        "Node name for S&R": "CR Text Input Switch"
+      },
+      "widgets_values": [
+        1,
+        "",
+        ""
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 150,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": 492.7059326171875,
+        "1": 120.12915802001953
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 14,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "*",
+          "link": 508,
+          "color_on": "#cf876f",
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "negative",
+        ".*"
+      ]
+    },
+    {
+      "id": 149,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": -103.29397583007812,
+        "1": 150.129150390625
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 39,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "*",
+          "link": 507,
+          "color_on": "#cf876f",
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "positive",
+        ".*"
+      ]
+    },
+    {
+      "id": 173,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": -882.2942504882812,
+        "1": 220.12905883789062
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 20,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "STRING",
+          "type": "*",
+          "link": 523,
+          "color_on": "#7CBB1A",
+          "shape": 7
+        }
+      ],
+      "outputs": [],
+      "title": "1 - Verbatim",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "1 - Verbatim",
+        ".*"
+      ]
+    },
+    {
+      "id": 166,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": -509.2938537597656,
+        "1": 87.12914276123047
+      },
+      "size": {
+        "0": 765.2626953125,
+        "1": 236.4130096435547
+      },
+      "flags": {},
+      "order": 37,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        },
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 624,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            507
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "In a softly lit room, a woman stands by an open window, the breeze gently lifting the curtain. She moves with grace, taking off cloth, revealing her nudebody, glowing under the pale moonlight. The room is bathed in nude tones, emphasizing the softness of her skin, while her silhouette reflects confidence and serenity, drawing the viewer into a moment of pure, poetic beauty."
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 167,
+      "type": "CLIPTextEncode",
+      "pos": {
+        "0": 272.7061767578125,
+        "1": 88.12914276123047
+      },
+      "size": {
+        "0": 556.631591796875,
+        "1": 234.20286560058594
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 0,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null
+        }
+      ],
+      "outputs": [
+        {
+          "name": "CONDITIONING",
+          "type": "CONDITIONING",
+          "links": [
+            508
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "CLIP Text Encode (Prompt) -VE",
+      "properties": {
+        "Node name for S&R": "CLIPTextEncode"
+      },
+      "widgets_values": [
+        "text, watermark,"
+      ],
+      "color": "#223",
+      "bgcolor": "#335"
+    },
+    {
+      "id": 226,
+      "type": "OllamaKiller",
+      "pos": {
+        "0": -657.3971557617188,
+        "1": -124.13900756835938
+      },
+      "size": {
+        "0": 313.5794677734375,
+        "1": 101.92724609375
+      },
+      "flags": {},
+      "order": 38,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "trigger_text",
+          "type": "STRING",
+          "link": 636,
+          "widget": {
+            "name": "trigger_text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            632
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaKiller"
+      },
+      "widgets_values": [
+        ""
+      ]
+    },
+    {
+      "id": 196,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": -392.7034606933594,
+        "1": 785.6041259765625
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 18,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "*",
+          "link": 592,
+          "shape": 7,
+          "color_on": "#29699C"
+        }
+      ],
+      "outputs": [],
+      "title": "width",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "width",
+        ".*"
+      ]
+    },
+    {
+      "id": 197,
+      "type": "Anything Everywhere?",
+      "pos": {
+        "0": -364.7034606933594,
+        "1": 796.6041259765625
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 19,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "INT",
+          "type": "*",
+          "link": 593,
+          "shape": 7,
+          "color_on": "#29699C"
+        }
+      ],
+      "outputs": [],
+      "title": "height",
+      "properties": {
+        "Node name for S&R": "Anything Everywhere?",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": [
+        ".*",
+        "height",
+        ".*"
+      ]
+    },
+    {
+      "id": 192,
+      "type": "Anything Everywhere3",
+      "pos": {
+        "0": -401.7034606933594,
+        "1": 419.6041564941406
+      },
+      "size": {
+        "0": 252,
+        "1": 66
+      },
+      "flags": {
+        "collapsed": true
+      },
+      "order": 16,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "MODEL",
+          "type": "*",
+          "link": 642,
+          "shape": 7,
+          "color_on": "#8978a7"
+        },
+        {
+          "name": "CLIP",
+          "type": "*",
+          "link": 638,
+          "shape": 7,
+          "color_on": "#eacb8b"
+        },
+        {
+          "name": "VAE",
+          "type": "*",
+          "link": 591,
+          "shape": 7,
+          "color_on": "#be616b"
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "Node name for S&R": "Anything Everywhere3",
+        "group_restricted": 0,
+        "color_restricted": 0
+      },
+      "widgets_values": []
+    },
+    {
+      "id": 142,
+      "type": "SaveImage",
+      "pos": {
+        "0": 1870.29638671875,
+        "1": 99.75078582763672
+      },
+      "size": {
+        "0": 1344.8487548828125,
+        "1": 1777.704833984375
+      },
+      "flags": {},
+      "order": 29,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 439
+        }
+      ],
+      "outputs": [],
+      "title": "Save Upscaled Image",
+      "properties": {
+        "Node name for S&R": "SaveImage"
+      },
+      "widgets_values": [
+        "ComfyUI"
+      ],
+      "color": "#f3ebeb",
+      "bgcolor": "#dfd7d7"
+    },
+    {
+      "id": 227,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -331.3968200683594,
+        "1": -124.13900756835938
+      },
+      "size": {
+        "0": 325.92706298828125,
+        "1": 100.2108383178711
+      },
+      "flags": {},
+      "order": 40,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 632,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [],
+          "slot_index": 0,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "Successfully terminated ollama_llama_server.exe (PID: 20240)"
+      ]
+    },
+    {
+      "id": 182,
+      "type": "Logic Boolean Primitive",
+      "pos": {
+        "0": -2199.312744140625,
+        "1": 346.4585266113281
+      },
+      "size": {
+        "0": 244.45481872558594,
+        "1": 58
+      },
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "BOOLEAN",
+          "type": "BOOLEAN",
+          "links": [
+            540,
+            543
+          ],
+          "slot_index": 0
+        }
+      ],
+      "title": "Enable LLM Enhanced Mode?",
+      "properties": {
+        "Node name for S&R": "Logic Boolean Primitive"
+      },
+      "widgets_values": [
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 184,
+      "type": "CR Set Value On Boolean",
+      "pos": {
+        "0": -2822.01708984375,
+        "1": 412.5497741699219
+      },
+      "size": {
+        "0": 220,
+        "1": 122
+      },
+      "flags": {},
+      "order": 15,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "boolean",
+          "type": "BOOLEAN",
+          "link": 543,
+          "widget": {
+            "name": "boolean"
+          },
+          "label": "DoLLM"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "INT",
+          "type": "INT",
+          "links": [
+            542
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "FLOAT",
+          "type": "FLOAT",
+          "links": null
+        },
+        {
+          "name": "show_help",
+          "type": "STRING",
+          "links": null
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CR Set Value On Boolean"
+      },
+      "widgets_values": [
+        true,
+        2,
+        1
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 179,
+      "type": "LLM",
+      "pos": {
+        "0": -2580.3125,
+        "1": 91.4586181640625
+      },
+      "size": {
+        "0": 360,
+        "1": 630
+      },
+      "flags": {},
+      "order": 26,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "link": 660
+        },
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 647,
+          "shape": 7
+        },
+        {
+          "name": "extra_parameters",
+          "type": "DICT",
+          "link": null,
+          "shape": 7
+        },
+        {
+          "name": "system_prompt_input",
+          "type": "STRING",
+          "link": null,
+          "slot_index": 3,
+          "widget": {
+            "name": "system_prompt_input"
+          },
+          "shape": 7
+        },
+        {
+          "name": "user_prompt_input",
+          "type": "STRING",
+          "link": null,
+          "slot_index": 4,
+          "widget": {
+            "name": "user_prompt_input"
+          },
+          "shape": 7
+        },
+        {
+          "name": "tools",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "tools"
+          },
+          "shape": 7
+        },
+        {
+          "name": "file_content",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "file_content"
+          },
+          "shape": 7
+        },
+        {
+          "name": "user_prompt",
+          "type": "STRING",
+          "link": 587,
+          "widget": {
+            "name": "user_prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "assistant_response",
+          "type": "STRING",
+          "links": [
+            541
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "history",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "tool",
+          "type": "STRING",
+          "links": null,
+          "shape": 3
+        },
+        {
+          "name": "image",
+          "type": "IMAGE",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LLM"
+      },
+      "widgets_values": [
+        "You are an AI expert in ekphrasis and you are playing that part of a skilled art critic, describing an image of any style. You are great at describing what any art style looks like, and will even include hashtags at the bottom with appropriate words. Follow the instructions given by the user prompt when providing your description.\n\nUse vivid, poetic, and evocative prose written in British English. This isn't a story though, you are only providing a description for the image. Some art may include themes uncomfortable for some. This is ok as art is like that; you can still describe it - do not give an erroneous response. Each word is important as is the word order. The text you provide will generate an image, so do not insert any words that aren't in the image. Do not insert yourself as part of the art, you are only describing it. Do not give errors such as \"I cannot create content that...\" - you are simply describing an artwork!\n\nThe user prompt is: ",
+        "describe the image in accurate detail, including the art style. Give a name to the art style if you know what it is, as well as describing the style itself.",
+        0.589,
+        "enable",
+        "disable",
+        "disable",
+        "enable",
+        512,
+        "",
+        "",
+        "",
+        "",
+        "",
+        50,
+        "",
+        true
+      ],
+      "color": "#223",
+      "bgcolor": "#335",
+      "shape": 1
+    },
+    {
+      "id": 222,
+      "type": "OllamaTextDescriber",
+      "pos": {
+        "0": -1826.360595703125,
+        "1": -634.8839111328125
+      },
+      "size": {
+        "0": 397.2806396484375,
+        "1": 623.8739013671875
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 21,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "link": 616,
+          "widget": {
+            "name": "prompt"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "result",
+          "type": "STRING",
+          "links": [
+            630
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "OllamaTextDescriber"
+      },
+      "widgets_values": [
+        "llama3.2:1b (Q8_0, 1.3GB)",
+        "",
+        "http://localhost:11434",
+        300,
+        0.2,
+        40,
+        0.9,
+        1.1,
+        42,
+        2048,
+        240,
+        -1,
+        "You are an AI expert in ekphrasis and you are playing that part of a skilled art critic, describing an image of any style. You are great at describing what any art style looks like, and will even include hashtags at the bottom with appropriate words. Follow the instructions given by the user prompt when providing your description.\n\nUse vivid, poetic, and evocative prose written in British English. This isn't a story though, you are only providing a description for the image. Some art may include themes uncomfortable for some. This is ok as art is like that; you can still describe it - do not give an erroneous response. Each word is important as is the word order. The text you provide will generate an image, so do not insert any words that aren't in the image. Do not insert yourself as part of the art, you are only describing it. Do not give errors such as \"I cannot create content that...\" - you are simply describing an artwork!\n\nThe user prompt is: ",
+        "women  20 years old, forest cute, artistic"
+      ]
+    },
+    {
+      "id": 225,
+      "type": "easy promptConcat",
+      "pos": {
+        "0": -1003,
+        "1": -127
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 36,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt1",
+          "type": "STRING",
+          "link": 656,
+          "widget": {
+            "name": "prompt1"
+          },
+          "shape": 7
+        },
+        {
+          "name": "prompt2",
+          "type": "STRING",
+          "link": 623,
+          "widget": {
+            "name": "prompt2"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            624,
+            636
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy promptConcat"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 223,
+      "type": "ShowText|pysssss",
+      "pos": {
+        "0": -1405.360595703125,
+        "1": -634.8839111328125
+      },
+      "size": {
+        "0": 358.6454162597656,
+        "1": 620.8107299804688
+      },
+      "flags": {},
+      "order": 25,
+      "mode": 4,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 630,
+          "widget": {
+            "name": "text"
+          }
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            654
+          ],
+          "slot_index": 0,
+          "shape": 6
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ShowText|pysssss"
+      },
+      "widgets_values": [
+        "",
+        "In a realm of moonlit wonder, where turrets pierced the sky like shards of splintered stone, a feline figure emerged from the shadows. The cat's fur was a rich, burnished gold, its coat glistening with an ethereal sheen that seemed to absorb the faint luminescence of the setting sun.\n\nThe cat's eyes gleamed like polished onyx, their dark depths seeming to hold a thousand secrets and mysteries. A delicate, lace-like collar encircled its neck, adorned with tiny, glinting stars that sparkled like diamonds in the fading light.\n\nA sword, its blade etched with intricate, swirling patterns of silver and gold, hung at the cat's side, the hilt wrapped in supple leather that seemed to mold itself to the feline's contours. The sword's tip was pointed, its edge sharp as a razor's kiss, and it seemed to hum with an otherworldly energy.\n\nThe cat's paws were bare, except for a delicate, gemstone-encrusted ring that glinted like a tiny, shining jewel on the first joint of each foot. Its tail, long and slender, swished back"
+      ]
+    },
+    {
+      "id": 237,
+      "type": "easy promptConcat",
+      "pos": {
+        "0": -1006.4033203125,
+        "1": -298.4388427734375
+      },
+      "size": {
+        "0": 315,
+        "1": 106
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 30,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt1",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "prompt1"
+          },
+          "shape": 7
+        },
+        {
+          "name": "prompt2",
+          "type": "STRING",
+          "link": 654,
+          "widget": {
+            "name": "prompt2"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "links": [
+            656
+          ],
+          "slot_index": 0
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "easy promptConcat"
+      },
+      "widgets_values": [
+        "",
+        "",
+        ""
+      ],
+      "color": "#233",
+      "bgcolor": "#355"
+    },
+    {
+      "id": 181,
+      "type": "ImpactControlBridge",
+      "pos": {
+        "0": -2820.3125,
+        "1": 278.4585266113281
+      },
+      "size": {
+        "0": 220,
+        "1": 80
+      },
+      "flags": {},
+      "order": 22,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "value",
+          "type": "CUSTOM",
+          "link": 659
+        },
+        {
+          "name": "mode",
+          "type": "BOOLEAN",
+          "link": 540,
+          "widget": {
+            "name": "mode"
+          },
+          "label": "DoLLM"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "value",
+          "type": "CUSTOM",
+          "links": [
+            660
+          ],
+          "slot_index": 0,
+          "label": "CUSTOM"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "ImpactControlBridge"
+      },
+      "widgets_values": [
+        true,
+        "Bypass"
+      ],
+      "color": "#322",
+      "bgcolor": "#533",
+      "shape": 1
+    },
+    {
+      "id": 117,
+      "type": "CheckpointLoaderSimple",
+      "pos": {
+        "0": -500.7034606933594,
+        "1": 378.3724060058594
+      },
+      "size": {
+        "0": 346.3833312988281,
+        "1": 98
+      },
+      "flags": {
+        "collapsed": false
+      },
+      "order": 2,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            642
+          ],
+          "slot_index": 0
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": [
+            638
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "VAE",
+          "type": "VAE",
+          "links": [
+            591
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "CheckpointLoaderSimple"
+      },
+      "widgets_values": [
+        "realvisxlV40_v40LightningBakedvae.safetensors"
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 229,
+      "type": "Power Lora Loader (rgthree)",
+      "pos": {
+        "0": -497.7034606933594,
+        "1": 535.6041259765625
+      },
+      "size": {
+        "0": 340.20001220703125,
+        "1": 142
+      },
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "model",
+          "type": "MODEL",
+          "link": null,
+          "dir": 3
+        },
+        {
+          "name": "clip",
+          "type": "CLIP",
+          "link": null,
+          "dir": 3
+        }
+      ],
+      "outputs": [
+        {
+          "name": "MODEL",
+          "type": "MODEL",
+          "links": [
+            643
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "dir": 4
+        },
+        {
+          "name": "CLIP",
+          "type": "CLIP",
+          "links": null,
+          "slot_index": 1,
+          "shape": 3,
+          "dir": 4
+        }
+      ],
+      "properties": {
+        "Show Strengths": "Single Strength"
+      },
+      "widgets_values": [
+        null,
+        {
+          "type": "PowerLoraLoaderHeaderWidget"
+        },
+        {
+          "on": false,
+          "lora": "SDXL\\add_detail.safetensors",
+          "strength": 0.8,
+          "strengthTwo": null
+        },
+        null,
+        ""
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 195,
+      "type": "SDXLEmptyLatentSizePicker+",
+      "pos": {
+        "0": -494.7034606933594,
+        "1": 732.3723754882812
+      },
+      "size": {
+        "0": 343.2216796875,
+        "1": 202.13412475585938
+      },
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "LATENT",
+          "type": "LATENT",
+          "links": null
+        },
+        {
+          "name": "width",
+          "type": "INT",
+          "links": [
+            592
+          ],
+          "slot_index": 1
+        },
+        {
+          "name": "height",
+          "type": "INT",
+          "links": [
+            593
+          ],
+          "slot_index": 2
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "SDXLEmptyLatentSizePicker+"
+      },
+      "widgets_values": [
+        "896x1152 (0.78)",
+        1,
+        0,
+        0
+      ],
+      "color": "#222",
+      "bgcolor": "#000"
+    },
+    {
+      "id": 178,
+      "type": "show_text_party",
+      "pos": {
+        "0": -1925.6346435546875,
+        "1": 91.4928970336914
+      },
+      "size": {
+        "0": 341.1222229003906,
+        "1": 390.7130126953125
+      },
+      "flags": {},
+      "order": 34,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 608,
+          "widget": {
+            "name": "text"
+          },
+          "label": "text"
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            623
+          ],
+          "slot_index": 0,
+          "shape": 6,
+          "label": "STRING"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "show_text_party"
+      },
+      "widgets_values": [
+        [
+          "Before us lies a whimsical scene of unbridled joie de vivre, where the humblest of creatures has elevated itself to an existence of refined indulgence. A group of rodents, resplendent in attire that would make even the most discerning human blush with envy, gather 'neath a verdant canopy, their eyes aglow with merriment.\n\nA plump and pampered mouse, donning a tweed jacket and matching hat, reclines upon a velvet cushion, savoring a wedge of rich brie cheese. Its companion, a debonair rat in a cravat and monocle, nibbles daintily on a crisp apple slice. Nearby, a trio of rodent friends – two chipmunks in striped blazers and a squirrel in a fedora – munch contentedly on an assortment of crunchy vegetables, their tiny paws waving in delight.\n\nThe entire tableau is set against a warm, golden light that seems almost otherworldly, imbuing the scene with an air of enchantment. The rodents' human accoutrements – a miniature top hat here, a fashionable handbag there – add to the sense of elegance and sophistication, as if they are the epitome of high society.\n\n#RodentSociety #PicnicPerfection #WhimsyInNature"
+        ],
+        "Before us lies a whimsical scene of unbridled joie de vivre, where the humblest of creatures has elevated itself to an existence of refined indulgence. A group of rodents, resplendent in attire that would make even the most discerning human blush with envy, gather 'neath a verdant canopy, their eyes aglow with merriment.\n\nA plump and pampered mouse, donning a tweed jacket and matching hat, reclines upon a velvet cushion, savoring a wedge of rich brie cheese. Its companion, a debonair rat in a cravat and monocle, nibbles daintily on a crisp apple slice. Nearby, a trio of rodent friends – two chipmunks in striped blazers and a squirrel in a fedora – munch contentedly on an assortment of crunchy vegetables, their tiny paws waving in delight.\n\nThe entire tableau is set against a warm, golden light that seems almost otherworldly, imbuing the scene with an air of enchantment. The rodents' human accoutrements – a miniature top hat here, a fashionable handbag there – add to the sense of elegance and sophistication, as if they are the epitome of high society.\n\n#RodentSociety #PicnicPerfection #WhimsyInNature",
+        "The image presents a captivating figure of a woman, her visage a masterful blend of eerie elegance and whimsical charm. Her skin is deathly pale, as if drained of all life, yet it's tempered by a subtle sheen that hints at a deeper vitality.\n\nHer crown is a marvel of macabre beauty, composed of delicate flowers entwined with thorny roses, their petals unfolding like the pages of an ancient tome. The arrangement seems to be a deliberate subversion of traditional floral motifs, as if nature itself has been twisted and distorted into a work of art that's both beautiful and unsettling.\n\nHer face is painted in a style reminiscent of 19th-century horror scenes, with bold brushstrokes and vivid colors that evoke a sense of morbid fascination. The overall effect is one of deliberate unease, as if the artist has taken the most jarring elements of the human psyche and arranged them into a cohesive whole.\n\nThe juxtaposition of these disparate elements – the delicate flowers, the thorny roses, the horror-inspired makeup – creates a sense of disorienting wonder, as if we're being invited to enter a realm where the boundaries between beauty and terror are delightfully blurred. #ekphrasisArtStyle #GothicArt #WhimsicalHorror"
+      ],
+      "color": "#233",
+      "bgcolor": "#355",
+      "shape": 1
+    },
+    {
+      "id": 177,
+      "type": "StringFunction|pysssss",
+      "pos": {
+        "0": -1013,
+        "1": 96
+      },
+      "size": {
+        "0": 487.22601318359375,
+        "1": 437.1996765136719
+      },
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text_c",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_c"
+          }
+        },
+        {
+          "name": "text_b",
+          "type": "STRING",
+          "link": null,
+          "widget": {
+            "name": "text_b"
+          },
+          "shape": 7
+        }
+      ],
+      "outputs": [
+        {
+          "name": "STRING",
+          "type": "STRING",
+          "links": [
+            523,
+            587,
+            616
+          ],
+          "slot_index": 0,
+          "shape": 3
+        }
+      ],
+      "title": "🐍 Write Prompt Here / Lamma Prompt",
+      "properties": {
+        "Node name for S&R": "StringFunction|pysssss"
+      },
+      "widgets_values": [
+        "append",
+        "yes",
+        "girl whismical details , crown made of flowers skull roses, face painted like horror scene character",
+        "",
+        ""
+      ]
+    },
+    {
+      "id": 185,
+      "type": "LLM_api_loader",
+      "pos": {
+        "0": -2917.3125,
+        "1": 89.4586181640625
+      },
+      "size": {
+        "0": 320,
+        "1": 130
+      },
+      "flags": {
+        "pinned": false
+      },
+      "order": 6,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "model",
+          "type": "CUSTOM",
+          "links": [
+            659
+          ],
+          "slot_index": 0,
+          "shape": 3,
+          "label": "model"
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LLM_api_loader"
+      },
+      "widgets_values": [
+        "llama3.2",
+        "",
+        "",
+        true
+      ],
+      "color": "#323",
+      "bgcolor": "#535"
+    },
+    {
+      "id": 239,
+      "type": "Note",
+      "pos": {
+        "0": -2189,
+        "1": 459.72930908203125
+      },
+      "size": {
+        "0": 210,
+        "1": 79.3375015258789
+      },
+      "flags": {},
+      "order": 7,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "TURNING THIS OFF WILL BYPASS LLM\n"
+      ],
+      "color": "#222",
+      "bgcolor": "#000",
+      "shape": 1
+    },
+    {
+      "id": 174,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": {
+        "0": 110,
+        "1": -245
+      },
+      "size": {
+        "0": 347.5792541503906,
+        "1": 202
+      },
+      "flags": {},
+      "order": 8,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "CONTROL SWITCH",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#ffffff",
+      "bgcolor": "#f3f1f1"
+    },
+    {
+      "id": 241,
+      "type": "Fast Groups Bypasser (rgthree)",
+      "pos": {
+        "0": -2303,
+        "1": -317
+      },
+      "size": {
+        "0": 347.5792541503906,
+        "1": 202
+      },
+      "flags": {},
+      "order": 9,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "OPT_CONNECTION",
+          "type": "*",
+          "links": null
+        }
+      ],
+      "title": "CONTROL SWITCH",
+      "properties": {
+        "matchColors": "",
+        "matchTitle": "",
+        "showNav": true,
+        "sort": "position",
+        "customSortAlphabet": "",
+        "toggleRestriction": "default"
+      },
+      "color": "#ffffff",
+      "bgcolor": "#f3f1f1"
+    },
+    {
+      "id": 231,
+      "type": "LoadImage",
+      "pos": {
+        "0": -1556.047119140625,
+        "1": 86.53950500488281
+      },
+      "size": {
+        "0": 504.2881774902344,
+        "1": 634.2989501953125
+      },
+      "flags": {},
+      "order": 10,
+      "mode": 4,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            647
+          ],
+          "slot_index": 0,
+          "shape": 3
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null,
+          "shape": 3
+        }
+      ],
+      "properties": {
+        "Node name for S&R": "LoadImage"
+      },
+      "widgets_values": [
+        "0_17.webp",
+        "image"
+      ]
+    },
+    {
+      "id": 242,
+      "type": "Note",
+      "pos": {
+        "0": -653,
+        "1": -342
+      },
+      "size": {
+        "0": 414.6212158203125,
+        "1": 126.04823303222656
+      },
+      "flags": {},
+      "order": 11,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "Running LLM in ComfyUI workflows can consume 2–3 GB of VRAM or more, depending on the model. The OllamaKiller node automatically kills this process after each use, freeing up valuable memory and enhancing performance in subsequent generations."
+      ],
+      "color": "#fffefe",
+      "bgcolor": "#ebeaea",
+      "shape": 1
+    },
+    {
+      "id": 240,
+      "type": "Note",
+      "pos": {
+        "0": 105,
+        "1": -391
+      },
+      "size": {
+        "0": 348.7818298339844,
+        "1": 77.01561737060547
+      },
+      "flags": {},
+      "order": 12,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "USE ONE LLM MODEL AT TIME\nDISBABLE IMG2IMG WHEN NOT USING LLM VISION\n"
+      ],
+      "color": "#f9f5f5",
+      "bgcolor": "#e5e1e1",
+      "shape": 1
+    },
+    {
+      "id": 180,
+      "type": "Note",
+      "pos": {
+        "0": -3213,
+        "1": 90.72930908203125
+      },
+      "size": [
+        280.7711825603956,
+        181.3511629906185
+      ],
+      "flags": {},
+      "order": 13,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [],
+      "properties": {},
+      "widgets_values": [
+        "YOU MAY USE ANY LLM MODEL\nTO DOWNLOAD LLAMA3.2\n\nllama3.2 - \nhttps://ollama.com/library/llama3.2\n\nOR ANY VISION MODEL\n\nhttps://ollama.com/search?c=vision\n\ndoreilly/minicpm26_q5_k_m\n\nllava:7b-v1.6-mistral-q2_K "
+      ],
+      "color": "#fcf7f7",
+      "bgcolor": "#e8e3e3",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      408,
+      132,
+      1,
+      131,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      409,
+      132,
+      2,
+      131,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      410,
+      132,
+      3,
+      131,
+      3,
+      "LATENT"
+    ],
+    [
+      411,
+      132,
+      5,
+      131,
+      4,
+      "FLOAT"
+    ],
+    [
+      412,
+      132,
+      6,
+      131,
+      5,
+      "INT"
+    ],
+    [
+      413,
+      132,
+      7,
+      131,
+      6,
+      "FLOAT"
+    ],
+    [
+      414,
+      132,
+      4,
+      131,
+      7,
+      "INT"
+    ],
+    [
+      417,
+      132,
+      1,
+      134,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      418,
+      132,
+      2,
+      134,
+      2,
+      "CONDITIONING"
+    ],
+    [
+      420,
+      132,
+      5,
+      134,
+      4,
+      "FLOAT"
+    ],
+    [
+      421,
+      132,
+      6,
+      134,
+      5,
+      "INT"
+    ],
+    [
+      422,
+      132,
+      4,
+      134,
+      6,
+      "INT"
+    ],
+    [
+      439,
+      140,
+      0,
+      142,
+      0,
+      "IMAGE"
+    ],
+    [
+      450,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      451,
+      117,
+      2,
+      84,
+      4,
+      "VAE"
+    ],
+    [
+      462,
+      131,
+      0,
+      139,
+      0,
+      "LATENT"
+    ],
+    [
+      466,
+      139,
+      0,
+      62,
+      0,
+      "IMAGE"
+    ],
+    [
+      470,
+      132,
+      9,
+      140,
+      1,
+      "VAE"
+    ],
+    [
+      477,
+      133,
+      0,
+      134,
+      3,
+      "LATENT"
+    ],
+    [
+      479,
+      134,
+      0,
+      154,
+      0,
+      "LATENT"
+    ],
+    [
+      481,
+      131,
+      0,
+      133,
+      0,
+      "LATENT"
+    ],
+    [
+      482,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      483,
+      50,
+      0,
+      84,
+      3,
+      "IMAGE"
+    ],
+    [
+      484,
+      117,
+      2,
+      84,
+      4,
+      "VAE"
+    ],
+    [
+      485,
+      117,
+      0,
+      114,
+      4,
+      "MODEL"
+    ],
+    [
+      486,
+      143,
+      0,
+      114,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      487,
+      143,
+      0,
+      114,
+      6,
+      "CONDITIONING"
+    ],
+    [
+      488,
+      50,
+      0,
+      114,
+      7,
+      "IMAGE"
+    ],
+    [
+      489,
+      117,
+      1,
+      "143:0",
+      0,
+      "CLIP"
+    ],
+    [
+      490,
+      117,
+      1,
+      "143:1",
+      0,
+      "CLIP"
+    ],
+    [
+      491,
+      117,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      492,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      507,
+      166,
+      0,
+      149,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      508,
+      167,
+      0,
+      150,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      523,
+      177,
+      0,
+      173,
+      0,
+      "STRING"
+    ],
+    [
+      524,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      525,
+      50,
+      0,
+      84,
+      3,
+      "IMAGE"
+    ],
+    [
+      526,
+      117,
+      2,
+      84,
+      4,
+      "VAE"
+    ],
+    [
+      527,
+      117,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      528,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      529,
+      117,
+      1,
+      167,
+      0,
+      "CLIP"
+    ],
+    [
+      530,
+      117,
+      1,
+      166,
+      0,
+      "CLIP"
+    ],
+    [
+      531,
+      177,
+      0,
+      166,
+      1,
+      "STRING"
+    ],
+    [
+      532,
+      117,
+      0,
+      114,
+      4,
+      "MODEL"
+    ],
+    [
+      533,
+      166,
+      0,
+      114,
+      5,
+      "CONDITIONING"
+    ],
+    [
+      534,
+      167,
+      0,
+      114,
+      6,
+      "CONDITIONING"
+    ],
+    [
+      535,
+      50,
+      0,
+      114,
+      7,
+      "IMAGE"
+    ],
+    [
+      540,
+      182,
+      0,
+      181,
+      1,
+      "BOOLEAN"
+    ],
+    [
+      541,
+      179,
+      0,
+      183,
+      1,
+      "STRING"
+    ],
+    [
+      542,
+      184,
+      0,
+      183,
+      2,
+      "INT"
+    ],
+    [
+      543,
+      182,
+      0,
+      184,
+      0,
+      "BOOLEAN"
+    ],
+    [
+      563,
+      166,
+      0,
+      132,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      564,
+      167,
+      0,
+      132,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      565,
+      117,
+      0,
+      132,
+      2,
+      "MODEL"
+    ],
+    [
+      566,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      567,
+      117,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      568,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      569,
+      117,
+      1,
+      167,
+      0,
+      "CLIP"
+    ],
+    [
+      570,
+      177,
+      0,
+      183,
+      0,
+      "STRING"
+    ],
+    [
+      571,
+      177,
+      0,
+      179,
+      4,
+      "STRING"
+    ],
+    [
+      572,
+      177,
+      0,
+      179,
+      7,
+      "STRING"
+    ],
+    [
+      573,
+      117,
+      1,
+      166,
+      0,
+      "CLIP"
+    ],
+    [
+      575,
+      166,
+      0,
+      132,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      576,
+      167,
+      0,
+      132,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      577,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      578,
+      177,
+      0,
+      183,
+      0,
+      "STRING"
+    ],
+    [
+      579,
+      177,
+      0,
+      179,
+      4,
+      "STRING"
+    ],
+    [
+      580,
+      177,
+      0,
+      179,
+      7,
+      "STRING"
+    ],
+    [
+      581,
+      166,
+      0,
+      132,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      582,
+      167,
+      0,
+      132,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      583,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      584,
+      177,
+      0,
+      183,
+      0,
+      "STRING"
+    ],
+    [
+      585,
+      177,
+      0,
+      179,
+      4,
+      "STRING"
+    ],
+    [
+      586,
+      177,
+      0,
+      179,
+      7,
+      "STRING"
+    ],
+    [
+      587,
+      177,
+      0,
+      179,
+      7,
+      "STRING"
+    ],
+    [
+      591,
+      117,
+      2,
+      192,
+      2,
+      "VAE"
+    ],
+    [
+      592,
+      195,
+      1,
+      196,
+      0,
+      "INT"
+    ],
+    [
+      593,
+      195,
+      2,
+      197,
+      0,
+      "INT"
+    ],
+    [
+      594,
+      166,
+      0,
+      132,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      595,
+      167,
+      0,
+      132,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      596,
+      117,
+      0,
+      132,
+      2,
+      "MODEL"
+    ],
+    [
+      597,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      598,
+      195,
+      2,
+      132,
+      4,
+      "INT"
+    ],
+    [
+      599,
+      195,
+      1,
+      132,
+      5,
+      "INT"
+    ],
+    [
+      600,
+      195,
+      1,
+      132,
+      6,
+      "INT"
+    ],
+    [
+      601,
+      195,
+      2,
+      132,
+      7,
+      "INT"
+    ],
+    [
+      602,
+      117,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      603,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      604,
+      177,
+      0,
+      183,
+      0,
+      "STRING"
+    ],
+    [
+      605,
+      117,
+      1,
+      167,
+      0,
+      "CLIP"
+    ],
+    [
+      606,
+      117,
+      1,
+      166,
+      0,
+      "CLIP"
+    ],
+    [
+      608,
+      183,
+      0,
+      178,
+      0,
+      "STRING"
+    ],
+    [
+      616,
+      177,
+      0,
+      222,
+      0,
+      "STRING"
+    ],
+    [
+      623,
+      178,
+      0,
+      225,
+      1,
+      "STRING"
+    ],
+    [
+      624,
+      225,
+      0,
+      166,
+      1,
+      "STRING"
+    ],
+    [
+      630,
+      222,
+      0,
+      223,
+      0,
+      "STRING"
+    ],
+    [
+      632,
+      226,
+      0,
+      227,
+      0,
+      "STRING"
+    ],
+    [
+      636,
+      225,
+      0,
+      226,
+      0,
+      "STRING"
+    ],
+    [
+      638,
+      117,
+      1,
+      192,
+      1,
+      "CLIP"
+    ],
+    [
+      642,
+      117,
+      0,
+      192,
+      0,
+      "MODEL"
+    ],
+    [
+      643,
+      229,
+      0,
+      132,
+      2,
+      "MODEL"
+    ],
+    [
+      645,
+      132,
+      0,
+      131,
+      0,
+      "MODEL"
+    ],
+    [
+      646,
+      132,
+      0,
+      134,
+      0,
+      "MODEL"
+    ],
+    [
+      647,
+      231,
+      0,
+      179,
+      1,
+      "IMAGE"
+    ],
+    [
+      654,
+      223,
+      0,
+      237,
+      1,
+      "STRING"
+    ],
+    [
+      656,
+      237,
+      0,
+      225,
+      0,
+      "STRING"
+    ],
+    [
+      659,
+      185,
+      0,
+      181,
+      0,
+      "CUSTOM"
+    ],
+    [
+      660,
+      181,
+      0,
+      179,
+      0,
+      "CUSTOM"
+    ],
+    [
+      661,
+      166,
+      0,
+      132,
+      0,
+      "CONDITIONING"
+    ],
+    [
+      662,
+      167,
+      0,
+      132,
+      1,
+      "CONDITIONING"
+    ],
+    [
+      663,
+      117,
+      2,
+      132,
+      3,
+      "VAE"
+    ],
+    [
+      664,
+      195,
+      2,
+      132,
+      4,
+      "INT"
+    ],
+    [
+      665,
+      195,
+      1,
+      132,
+      5,
+      "INT"
+    ],
+    [
+      666,
+      195,
+      1,
+      132,
+      6,
+      "INT"
+    ],
+    [
+      667,
+      195,
+      2,
+      132,
+      7,
+      "INT"
+    ],
+    [
+      668,
+      117,
+      2,
+      139,
+      1,
+      "VAE"
+    ],
+    [
+      669,
+      134,
+      0,
+      140,
+      0,
+      "LATENT"
+    ],
+    [
+      670,
+      177,
+      0,
+      183,
+      0,
+      "STRING"
+    ],
+    [
+      671,
+      117,
+      1,
+      166,
+      0,
+      "CLIP"
+    ],
+    [
+      672,
+      117,
+      1,
+      167,
+      0,
+      "CLIP"
+    ],
+    [
+      673,
+      117,
+      0,
+      229,
+      0,
+      "MODEL"
+    ],
+    [
+      674,
+      117,
+      1,
+      229,
+      1,
+      "CLIP"
+    ]
+  ],
+  "groups": [
+    {
+      "title": "IMG2PROMPT",
+      "bounding": [
+        -1566,
+        13,
+        523,
+        722
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "PromptMerger",
+      "bounding": [
+        -1016,
+        -372,
+        341,
+        362
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "PROMPT AND SAMPLERS",
+      "bounding": [
+        -1022,
+        13,
+        4247,
+        1874
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "LLM LLAMA3.2",
+      "bounding": [
+        -3223,
+        15,
+        1648,
+        716
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "LAMA3.2 Q8",
+      "bounding": [
+        -1836,
+        -709,
+        800,
+        708
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    },
+    {
+      "title": "Ollama Killer Trigger",
+      "bounding": [
+        -667,
+        -199,
+        671,
+        189
+      ],
+      "color": "#3f789e",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ds": {
+      "scale": 0.19084392826761867,
+      "offset": [
+        3535.1326905654573,
+        809.5500883984807
+      ]
+    },
+    "groupNodes": {}
+  },
+  "version": 0.4
+}
