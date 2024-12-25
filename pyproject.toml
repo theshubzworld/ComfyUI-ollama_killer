@@ -1,0 +1,14 @@
+[project]
+name = "comfyui-ollama_killer"
+description = "OllamaKiller is a utility node for ComfyUI designed to manage VRAM usage more efficiently by automatically terminating the ollama_llama_server.exe process. This is particularly useful for users with limited VRAM, allowing them to clear up memory after running models and improve workflow performance."
+version = "1.0.0"
+license = {file = "LICENSE"}
+
+[project.urls]
+Repository = "https://github.com/mithamunda/ComfyUI-ollama_killer"
+#  Used by Comfy Registry https://comfyregistry.org
+
+[tool.comfy]
+PublisherId = ""
+DisplayName = "ComfyUI-ollama_killer"
+Icon = ""
