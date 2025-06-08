@@ -1,0 +1,430 @@
+{
+  "id": "118f4070-b609-4f03-971a-063efb745692",
+  "revision": 0,
+  "last_node_id": 13,
+  "last_link_id": 12,
+  "nodes": [
+    {
+      "id": 3,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -179.53836059570312,
+        2335.376220703125
+      ],
+      "size": [
+        297.9442138671875,
+        229.20542907714844
+      ],
+      "flags": {},
+      "order": 4,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 4
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": [
+            5
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.0",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {},
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "Here’s a concise description of the image:\n\nA fair-skinned woman with long, wavy, dark brown hair stands vertically on a light grey rotating platform. She wears a seamless charcoal gray sports bra and matching high-waisted leggings. Her feet are bare. The background is a plain, bright white."
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 2,
+      "type": "ShowText|pysssss",
+      "pos": [
+        -182.73243713378906,
+        2138.54638671875
+      ],
+      "size": [
+        298.4299621582031,
+        131.06439208984375
+      ],
+      "flags": {},
+      "order": 3,
+      "mode": 0,
+      "inputs": [
+        {
+          "label": "text",
+          "name": "text",
+          "type": "STRING",
+          "link": 3
+        }
+      ],
+      "outputs": [
+        {
+          "label": "STRING",
+          "name": "STRING",
+          "shape": 6,
+          "type": "STRING",
+          "slot_index": 0,
+          "links": []
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-custom-scripts",
+        "ver": "1.1.0",
+        "Node name for S&R": "ShowText|pysssss",
+        "widget_ue_connectable": {},
+        "enableTabs": false,
+        "tabWidth": 65,
+        "tabXOffset": 10,
+        "hasSecondTab": false,
+        "secondTabText": "Send Back",
+        "secondTabOffset": 80,
+        "secondTabWidth": 65
+      },
+      "widgets_values": [
+        "Successfully terminated 2 of 2 process(es).\n✓ Process terminated (PID: 4780)\n✓ Process terminated (PID: 15216)"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    },
+    {
+      "id": 7,
+      "type": "PreviewImage",
+      "pos": [
+        567.8134155273438,
+        2138.54638671875
+      ],
+      "size": [
+        603.6212768554688,
+        635.3307495117188
+      ],
+      "flags": {},
+      "order": 6,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 6
+        }
+      ],
+      "outputs": [],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "Node name for S&R": "PreviewImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 12,
+      "type": "LoadImage",
+      "pos": [
+        -1295.8721923828125,
+        2138.54638671875
+      ],
+      "size": [
+        274.080078125,
+        314
+      ],
+      "flags": {},
+      "order": 0,
+      "mode": 0,
+      "inputs": [],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            11
+          ]
+        },
+        {
+          "name": "MASK",
+          "type": "MASK",
+          "links": null
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfy-core",
+        "ver": "0.3.38",
+        "Node name for S&R": "LoadImage",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "0001.png",
+        "image"
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 13,
+      "type": "OllamaVision",
+      "pos": [
+        -985.6868896484375,
+        2138.54638671875
+      ],
+      "size": [
+        400,
+        256
+      ],
+      "flags": {},
+      "order": 1,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "images",
+          "type": "IMAGE",
+          "link": 11
+        }
+      ],
+      "outputs": [
+        {
+          "name": "description",
+          "type": "STRING",
+          "links": [
+            12
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-ollama",
+        "ver": "2.0.4",
+        "Node name for S&R": "OllamaVision",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "You are an AI expert writing prompts. be specific, dont include yourself as part of prompt. every detail matter. dont use same words twice. be concise:\n\ndescribe this image",
+        "enable",
+        "http://127.0.0.1:11434",
+        "gemma3:4b",
+        5,
+        "text",
+        595452934,
+        "randomize",
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 6,
+      "type": "Together Image 🎨",
+      "pos": [
+        146.0283966064453,
+        2138.54638671875
+      ],
+      "size": [
+        400,
+        389.85198974609375
+      ],
+      "flags": {},
+      "order": 5,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "prompt",
+          "type": "STRING",
+          "widget": {
+            "name": "prompt"
+          },
+          "link": 5
+        }
+      ],
+      "outputs": [
+        {
+          "name": "IMAGE",
+          "type": "IMAGE",
+          "links": [
+            6
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-togethervision",
+        "ver": "553cac9ddbc6d2bda5d127ac4ca55beb5e7a8f6f",
+        "Node name for S&R": "Together Image 🎨",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        "",
+        "284df88826eea860107bc40c61d382474be2c8b513d810dc840d08dc1a926f22",
+        768,
+        1280,
+        731428635193211,
+        "randomize",
+        1,
+        [
+          false,
+          true
+        ]
+      ],
+      "color": "#232",
+      "bgcolor": "#353"
+    },
+    {
+      "id": 4,
+      "type": "OllamaKiller",
+      "pos": [
+        -561.8673706054688,
+        2138.54638671875
+      ],
+      "size": [
+        270,
+        102
+      ],
+      "flags": {},
+      "order": 2,
+      "mode": 0,
+      "inputs": [
+        {
+          "name": "text",
+          "type": "STRING",
+          "link": 12
+        }
+      ],
+      "outputs": [
+        {
+          "name": "status",
+          "type": "STRING",
+          "links": [
+            3
+          ]
+        },
+        {
+          "name": "output_text",
+          "type": "STRING",
+          "links": [
+            4
+          ]
+        }
+      ],
+      "properties": {
+        "cnr_id": "comfyui-ollama_killer",
+        "ver": "091cc9a0b70e1f2ea6cb96899f49842296f59f26",
+        "Node name for S&R": "OllamaKiller",
+        "widget_ue_connectable": {}
+      },
+      "widgets_values": [
+        true,
+        "true"
+      ],
+      "color": "#232",
+      "bgcolor": "#353",
+      "shape": 1
+    }
+  ],
+  "links": [
+    [
+      3,
+      4,
+      0,
+      2,
+      0,
+      "STRING"
+    ],
+    [
+      4,
+      4,
+      1,
+      3,
+      0,
+      "STRING"
+    ],
+    [
+      5,
+      3,
+      0,
+      6,
+      0,
+      "STRING"
+    ],
+    [
+      6,
+      6,
+      0,
+      7,
+      0,
+      "IMAGE"
+    ],
+    [
+      11,
+      12,
+      0,
+      13,
+      0,
+      "IMAGE"
+    ],
+    [
+      12,
+      13,
+      0,
+      4,
+      0,
+      "STRING"
+    ]
+  ],
+  "groups": [
+    {
+      "id": 1,
+      "title": "OLLAMA KILLER AND TOGETHER AI",
+      "bounding": [
+        -1305.8721923828125,
+        2064.9462890625,
+        2487.306884765625,
+        718.9307861328125
+      ],
+      "color": "#8A8",
+      "font_size": 24,
+      "flags": {}
+    }
+  ],
+  "config": {},
+  "extra": {
+    "ue_links": [],
+    "links_added_by_ue": [],
+    "ds": {
+      "scale": 0.49500000000000116,
+      "offset": [
+        1382.7084672033,
+        -1541.6161692187766
+      ]
+    },
+    "frontendVersion": "1.20.6",
+    "VHS_latentpreview": false,
+    "VHS_latentpreviewrate": 0,
+    "VHS_MetadataImage": true,
+    "VHS_KeepIntermediate": true
+  },
+  "version": 0.4
+}
