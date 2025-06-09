@@ -5,7 +5,7 @@
 
 ## Features
 
-- **Cross-Platform Support**: Works on Windows, macOS, and Linux
+- **Cross-Platform Support**: Works on Windows, Unconfirmed with macOS, and Linux so test yourself.
 - **Automatic Process Detection**: Finds and terminates Ollama processes
 - **Graceful Termination**: Attempts clean shutdown before force killing
 - **Detailed Status**: Provides clear feedback about process termination
