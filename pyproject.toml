@@ -11,4 +11,4 @@ Repository = "https://github.com/theshubzworld/ComfyUI-ollama_killer"
 [tool.comfy]
 PublisherId = "shubzworld"
 DisplayName = "ComfyUI-ollama_killer"
-Icon = ""
+Icon = "https://avatars.githubusercontent.com/u/176368083"
