@@ -1,7 +1,7 @@
 [project]
 name = "comfyui-ollama_killer"
 description = "OllamaKiller is a cross-platform utility node for ComfyUI that automatically manages Ollama processes (`ollama.exe` on Windows, `ollama` on macOS/Linux). It helps free up VRAM by terminating Ollama processes after model execution, improving workflow performance and memory management. Features include graceful process termination, detailed status reporting, and seamless text passthrough."
-version = "1.1.1"
+version = "1.2.1"
 license = {file = "LICENSE"}
 
 [project.urls]
